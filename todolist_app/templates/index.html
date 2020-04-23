@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+	<title> Welcome to Todo List app</title>
+{% endblock title %}
+
+
+{% block content %}
+
+
+	<div class="container">
+		
+
+		{# Rows for images #}
+		<div class="row mt-5">
+			
+			<div class="col-lg-4">
+				<img class="shadow" src="{% static 'images/todo1.jpeg' %} " width="350" height="250">
+
+			</div>
+				
+			<div class="col-lg-4">
+				<img class="shadow"  src="{% static 'images/todo2.jpeg' %}" width="350" height="250" >
+			</div>
+
+			<div class="col-lg-4">
+				<img class="shadow" src="{% static 'images/todo3.jpeg' %}" width="350" height="250">
+			</div>
+
+		</div>
+
+		{# Row for text #}
+
+		<div class="row mt-5">
+			<div class="col-md-10 offset-md-1">
+				<center><p class="h1 text-primary"> Welcome to TodoList app </p></center>
+				<center><p class="h3 mt-3"> With this tool you will be able to organize your day2day activities </p></center>
+				<center><p class="h5">  We hope you like it! </p></center>
+
+				<center><a href="{% url 'todolist'%}">  <button type="button" class="btn btn-primary btn-lg mt-3 shadow">Get started </button></a></center>
+			</div>
+		</div>
+
+	</div>
+
+	
+{% endblock content %}
